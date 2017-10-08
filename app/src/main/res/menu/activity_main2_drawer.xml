@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_search_faculty"
+            android:icon="@drawable/places_ic_search"
+            android:title="Search Faculty" />
+        <item
+            android:id="@+id/nav_update_profile"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Update Profile Picture" />
+        <item
+            android:id="@+id/nav_update_details"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Update Details" />
+
+        <item
+            android:id="@+id/nav_timetable"
+            android:icon="@drawable/ic_menu_gallery"
+
+            android:title="Time Table" />
+    </group>
+
+
+
+</menu>

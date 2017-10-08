@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/Profile_pic"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
+        <TextView
+            android:id="@+id/f_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/Profile_pic"
+            android:layout_marginLeft="20dp"/>
+
+
+            <TextView
+            android:id="@+id/f_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/Profile_pic"
+            android:layout_below="@id/f_id"
+            android:layout_marginLeft="20dp"/>
+
+
+
+
+            <TextView
+            android:id="@+id/f_dept"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/Profile_pic"
+            android:layout_below="@id/f_name"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:id="@+id/f_loct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/Profile_pic"
+            android:layout_below="@id/f_dept"
+            android:layout_marginLeft="20dp"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/f_loct"
+                android:layout_toRightOf="@id/Profile_pic"
+                android:id="@+id/f_loct_room"
+                android:layout_marginLeft="20dp"/>
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+</LinearLayout>

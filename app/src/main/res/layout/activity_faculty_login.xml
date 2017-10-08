@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.risabhmishra.facultylocator.faculty_login">
+
+
+    <TextView
+        android:id="@+id/head_fac_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="43dp"
+        android:fontFamily="serif-monospace"
+        android:text="Welcome Faculty"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/et_fac_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter Your Email"
+        android:inputType="textEmailAddress"
+        android:layout_below="@+id/head_fac_login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="52dp" />
+
+    <EditText
+        android:id="@+id/et_fac_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter Your Password"
+        android:inputType="textPassword"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/et_fac_email"
+        android:layout_alignStart="@+id/et_fac_email" />
+
+    <Button
+        android:id="@+id/bu_fac_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/head_fac_login"
+        android:layout_alignStart="@+id/head_fac_login"
+        android:layout_marginLeft="33dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginBottom="87dp" />
+
+    <Button
+        android:id="@+id/bu_fac_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SIgn Up"
+        android:layout_alignBaseline="@+id/bu_fac_login"
+        android:layout_alignBottom="@+id/bu_fac_login"
+        android:layout_alignRight="@+id/head_fac_login"
+        android:layout_alignEnd="@+id/head_fac_login"
+        android:layout_marginRight="26dp"
+        android:layout_marginEnd="26dp" />
+
+</RelativeLayout>

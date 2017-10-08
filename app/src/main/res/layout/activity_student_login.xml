@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.risabhmishra.facultylocator.student_login">
+
+    <TextView
+        android:id="@+id/head_fac_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="43dp"
+        android:fontFamily="serif-monospace"
+        android:text="Welcome Student"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/et_stu_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/head_fac_login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="91dp"
+        android:ems="10"
+        android:hint="Enter Your Email"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/et_stu_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/et_stu_email"
+        android:layout_alignStart="@+id/et_stu_email"
+        android:layout_below="@+id/et_stu_email"
+        android:layout_marginTop="51dp"
+        android:ems="10"
+        android:hint="Enter Your Password"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/bu_stu_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/bu_stu_signup"
+        android:layout_alignBottom="@+id/bu_stu_signup"
+        android:layout_alignLeft="@+id/et_stu_pass"
+        android:layout_alignStart="@+id/et_stu_pass"
+        android:text="Login" />
+
+    <Button
+        android:id="@+id/bu_stu_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/et_stu_pass"
+        android:layout_alignRight="@+id/et_stu_pass"
+        android:layout_below="@+id/et_stu_pass"
+        android:layout_marginTop="68dp"
+        android:text="SIgn Up" />
+
+</RelativeLayout>
