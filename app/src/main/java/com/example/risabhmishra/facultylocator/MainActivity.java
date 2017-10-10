@@ -64,19 +64,6 @@ public class MainActivity extends AppCompatActivity
         mAuth = FirebaseAuth.getInstance();
         mImagestorage = FirebaseStorage.getInstance().getReference();
 
-
-        BottomBar bottomBar = (BottomBar) findViewById(R.id.bottomBar);
-        bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
-            @Override
-            public void onTabSelected(@IdRes int tabId) {
-                if (tabId == R.id.tab_favorites) {
-                    // The tab with id R.id.tab_favorites was selected,
-                    // change your content accordingly.
-                }
-            }
-        });
-
-
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
 
         View hView =  navigationView.getHeaderView(0);
