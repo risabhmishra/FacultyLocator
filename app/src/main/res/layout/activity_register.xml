@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/loginback"
     tools:context="com.example.risabhmishra.facultylocator.Register">
 
 
@@ -14,11 +15,22 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="53dp"
-        android:fontFamily="serif-monospace"
-        android:text="Sign Up"
+        android:textColor="#fff"
+        android:text="SIGN UP"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-        android:textSize="36sp"
+        android:textSize="32sp"
         android:textStyle="bold" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/tx_signup"
+        android:layout_marginEnd="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="6dp"
+        android:background="@android:color/white" />
 
     <EditText
         android:id="@+id/et_su_email"
@@ -27,6 +39,8 @@
         android:layout_marginTop="95dp"
         android:ems="10"
         android:hint="Official Email"
+        android:textColor="#fff"
+        android:textColorHint="#fff"
         android:inputType="textEmailAddress"
         android:layout_below="@+id/tx_signup"
         android:layout_centerHorizontal="true" />
@@ -39,6 +53,8 @@
         android:hint="Password"
         android:inputType="textPassword"
         android:layout_marginTop="31dp"
+        android:textColor="#fff"
+        android:textColorHint="#fff"
         android:layout_below="@+id/et_su_email"
         android:layout_alignLeft="@+id/et_su_email"
         android:layout_alignStart="@+id/et_su_email" />
@@ -50,6 +66,8 @@
         android:layout_marginTop="33dp"
         android:ems="10"
         android:hint="Confirm Password"
+        android:textColor="#fff"
+        android:textColorHint="#fff"
         android:inputType="textPassword"
         android:layout_below="@+id/et_su_pass"
         android:layout_alignLeft="@+id/et_su_pass"
@@ -59,10 +77,11 @@
         android:id="@+id/bu_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/et_su_cpass"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="42dp"
-        android:text="Register" />
+        android:text="Register"
+        android:background="@drawable/button_layout_white"
+        android:layout_below="@+id/et_su_cpass"
+        android:layout_centerHorizontal="true" />
 
     <EditText
         android:id="@+id/et_fac_name"
@@ -73,6 +92,8 @@
         android:layout_below="@+id/tx_signup"
         android:layout_marginTop="28dp"
         android:ems="10"
+        android:textColor="#fff"
+        android:textColorHint="#fff"
         android:hint="Name"
         android:inputType="textPersonName" />
 </RelativeLayout>
