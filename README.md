@@ -1,1 +1,1 @@
-# FacultyLocator
+# Faculty Locator
