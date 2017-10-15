@@ -4,14 +4,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/loginback"
     tools:context="com.example.risabhmishra.facultylocator.data">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ENTER FACULTY DETAILS"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#fff"
+
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="35dp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:background="@android:color/white" />
 
     <EditText
         android:id="@+id/et_fid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="40dp"
         android:ems="10"
+        android:textColor="#fff"
+        android:textColorHint="#fff"
         android:hint="Faculty Id"
         android:inputType="textPersonName"
         tools:layout_editor_absoluteX="85dp"
@@ -27,12 +64,14 @@
         android:ems="10"
         android:hint="Faculty Name"
         android:inputType="textPersonName"
+        android:textColor="#fff"
+        android:textColorHint="#fff"
         tools:layout_editor_absoluteX="85dp"
         tools:layout_editor_absoluteY="166dp"
         android:layout_below="@+id/et_fid"
         android:layout_alignLeft="@+id/et_dept"
         android:layout_alignStart="@+id/et_dept"
-        android:layout_marginTop="28dp" />
+        android:layout_marginTop="25dp" />
 
     <EditText
         android:id="@+id/et_dept"
@@ -41,7 +80,10 @@
         android:ems="10"
         android:hint="Department"
         android:inputType="textPersonName"
+        android:textColor="#fff"
+        android:textColorHint="#fff"
         tools:layout_editor_absoluteX="85dp"
+        android:layout_marginTop="25dp"
         tools:layout_editor_absoluteY="246dp"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
@@ -53,37 +95,18 @@
         android:layout_alignLeft="@+id/et_dept"
         android:layout_alignStart="@+id/et_dept"
         android:layout_below="@+id/et_dept"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="25dp"
         android:ems="10"
+        android:textColor="#fff"
+        android:textColorHint="#fff"
         android:hint="Building"
         android:inputType="textPersonName"
         tools:layout_editor_absoluteX="85dp"
         tools:layout_editor_absoluteY="328dp" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Enter Faculty Details"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="109dp"
-        tools:layout_editor_absoluteY="33dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="35dp" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Submit"
-        tools:layout_editor_absoluteX="147dp"
-        tools:layout_editor_absoluteY="431dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="23dp" />
+
+
 
     <EditText
         android:id="@+id/et_location_room"
@@ -92,8 +115,25 @@
         android:layout_above="@+id/button2"
         android:layout_alignLeft="@+id/et_location"
         android:layout_alignStart="@+id/et_location"
-        android:layout_marginBottom="16dp"
+        android:textColor="#fff"
+        android:textColorHint="#fff"
         android:ems="10"
+        android:layout_marginTop="25dp"
         android:hint="Room No."
         android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:layout_marginTop="25dp"
+            tools:layout_editor_absoluteX="147dp"
+            android:background="@drawable/button_layout_white"
+            tools:layout_editor_absoluteY="431dp"
+            android:layout_marginBottom="21dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+    </LinearLayout>
 </RelativeLayout>

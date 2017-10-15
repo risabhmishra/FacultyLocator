@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/loginback"
     tools:context="com.example.risabhmishra.facultylocator.student_login">
 
     <TextView
@@ -13,11 +14,23 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="43dp"
-        android:fontFamily="serif-monospace"
+        android:textColor="#fff"
         android:text="Welcome Student"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
         android:textSize="36sp"
         android:textStyle="bold" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/head_fac_login"
+        android:layout_marginEnd="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:background="@android:color/white" />
 
     <EditText
         android:id="@+id/et_stu_email"
@@ -26,6 +39,8 @@
         android:layout_below="@+id/head_fac_login"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="91dp"
+        android:textColor="#fff"
+        android:textColorHint="#fff"
         android:ems="10"
         android:hint="Enter Your Email"
         android:inputType="textEmailAddress" />
@@ -39,6 +54,8 @@
         android:layout_below="@+id/et_stu_email"
         android:layout_marginTop="51dp"
         android:ems="10"
+        android:textColor="#fff"
+        android:textColorHint="#fff"
         android:hint="Enter Your Password"
         android:inputType="textPassword" />
 
@@ -50,6 +67,7 @@
         android:layout_alignBottom="@+id/bu_stu_signup"
         android:layout_alignLeft="@+id/et_stu_pass"
         android:layout_alignStart="@+id/et_stu_pass"
+        android:background="@drawable/button_layout_white"
         android:text="Login" />
 
     <Button
@@ -59,6 +77,7 @@
         android:layout_alignEnd="@+id/et_stu_pass"
         android:layout_alignRight="@+id/et_stu_pass"
         android:layout_below="@+id/et_stu_pass"
+        android:background="@drawable/button_layout_white"
         android:layout_marginTop="68dp"
         android:text="SIgn Up" />
 

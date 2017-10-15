@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/loginback"
     tools:context="com.example.risabhmishra.facultylocator.faculty_login">
 
 
@@ -14,11 +15,24 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="43dp"
-        android:fontFamily="serif-monospace"
-        android:text="Welcome Faculty"
+
+        android:text="WELCOME FACULTY"
+        android:textColor="#fff"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
         android:textSize="36sp"
         android:textStyle="bold" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/head_fac_login"
+        android:layout_marginEnd="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:background="@android:color/white" />
 
     <EditText
         android:id="@+id/et_fac_email"
@@ -26,21 +40,26 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Enter Your Email"
+        android:textColor="#fff"
+        android:textColorHint="#fff"
         android:inputType="textEmailAddress"
         android:layout_below="@+id/head_fac_login"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="52dp" />
+        android:layout_marginTop="120sp" />
 
     <EditText
         android:id="@+id/et_fac_pass"
+        android:layout_below="@id/et_fac_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:textColor="#fff"
+        android:textColorHint="#fff"
+        android:layout_marginTop="30sp"
         android:hint="Enter Your Password"
         android:inputType="textPassword"
-        android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/et_fac_email"
-        android:layout_alignStart="@+id/et_fac_email" />
+        android:layout_centerHorizontal="true"
+       />
 
     <Button
         android:id="@+id/bu_fac_login"
@@ -52,6 +71,7 @@
         android:layout_alignStart="@+id/head_fac_login"
         android:layout_marginLeft="33dp"
         android:layout_marginStart="33dp"
+        android:background="@drawable/button_layout_white"
         android:layout_marginBottom="87dp" />
 
     <Button
@@ -64,6 +84,7 @@
         android:layout_alignRight="@+id/head_fac_login"
         android:layout_alignEnd="@+id/head_fac_login"
         android:layout_marginRight="26dp"
+        android:background="@drawable/button_layout_white"
         android:layout_marginEnd="26dp" />
 
 </RelativeLayout>
