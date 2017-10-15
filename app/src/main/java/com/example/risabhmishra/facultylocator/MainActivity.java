@@ -64,6 +64,9 @@ public class MainActivity extends AppCompatActivity
         mAuth = FirebaseAuth.getInstance();
         mImagestorage = FirebaseStorage.getInstance().getReference();
 
+
+
+
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
 
         View hView =  navigationView.getHeaderView(0);
@@ -123,10 +126,7 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         switch (item.getItemId()) {
-            case R.id.logout:
-                FirebaseAuth.getInstance().signOut();
-                sendtostart();
-                break;
+
         }
         return true;
     }
@@ -157,6 +157,12 @@ public class MainActivity extends AppCompatActivity
 
         }
 
+        else if (id == R.id.logout)
+        {
+            FirebaseAuth.getInstance().signOut();
+                sendtostart();
+
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

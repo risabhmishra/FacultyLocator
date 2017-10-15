@@ -68,15 +68,6 @@ public class Map_activity extends FragmentActivity implements OnMapReadyCallback
     private LocationManager locationManager;
     private LocationListener listener;
 
-    private static int UPDATE_INTERVAL = 5000; // SEC
-    private static int FATEST_INTERVAL = 3000; // SEC
-    private static int DISPLACEMENT = 10; // METERS
-    private static final int MY_PERMISSION_REQUEST_CODE = 7171;
-    private static final int PLAY_SERVICES_RESOLUTION_REQUEST = 7172;
-    private boolean mRequestingLocationUpdates = false;
-    private Location mLastLocation;
-    private LocationRequest mLocationRequest;
-    private Polyline polyLine;
 String building;
     String dest;
 
@@ -89,6 +80,10 @@ String building;
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
+
+        Bundle bundle = getIntent().getExtras();
+        dest = bundle.getString("Location");
+        building = bundle.getString("Location").trim().toUpperCase();
 
     }
 
@@ -110,10 +105,8 @@ String building;
 
         mMap.setMyLocationEnabled(true);
 
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(BioTech, 15));
 
-        Bundle bundle = getIntent().getExtras();
-        dest = bundle.getString("Location");
-        building = bundle.getString("Location").trim().toUpperCase();
         switch (building) {
             case "TECHPARK":
                 destination = Tech_Park;

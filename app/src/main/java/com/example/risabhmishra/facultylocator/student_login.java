@@ -6,6 +6,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,6 +17,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class student_login extends AppCompatActivity {
 TextView head;
@@ -24,22 +26,41 @@ TextView head;
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthstatelistener;
     private ProgressDialog mprogressdialog;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_login);
 
+        mAuth = FirebaseAuth.getInstance();
+
+        mAuthstatelistener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                FirebaseUser user = firebaseAuth.getCurrentUser();
+                if (user != null) {
+                    // User is signed in
+                    Log.d("r", "onAuthStateChanged:signed_in:" + user.getUid());
+                    startActivity(new Intent(student_login.this,MainActivity.class));
+                } else {
+                    // User is signed out
+                    Log.d("r", "onAuthStateChanged:signed_out");
+                }
+                // ...
+            }
+        };
+
         head = (TextView)findViewById(R.id.head_fac_login);
         semail = (EditText)findViewById(R.id.et_stu_email);
         spass = (EditText)findViewById(R.id.et_stu_pass);
-        login = (Button)findViewById(R.id.bu_student_login);
+        login = (Button)findViewById(R.id.bu_stu_login);
         signup = (Button)findViewById(R.id.bu_stu_signup);
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 OnLogin();
-
             }
         });
 
