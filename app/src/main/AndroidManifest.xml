@@ -26,7 +26,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".data" />
-        <activity android:name=".Views" />
+        <activity android:name=".Views"
+            android:theme="@style/AppTheme"
+            />
         <activity android:name=".MainActivity" />
         <activity android:name=".faculty_login" />
         <activity android:name=".student_login" />
@@ -48,10 +50,7 @@
         <activity
             android:name=".Map_activity"
             android:label="@string/title_activity_map_activity" />
-        <activity
-            android:name=".Main2Activity"
-            android:label="@string/title_activity_main2"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+
     </application>
 
 </manifest>

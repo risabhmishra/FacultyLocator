@@ -8,36 +8,37 @@ import java.util.ArrayList;
  * Created by Risabh Mishra on 8/5/2017.
  */
 
-public class CustomFilter extends Filter{
+public class CustomFilter extends Filter {
 
     MyAdapter adapter;
     ArrayList<faculty> filterlist;
     FilterResults results = new FilterResults();
-    public CustomFilter(ArrayList<faculty> filterlist,MyAdapter adapter){
+
+    public CustomFilter(ArrayList<faculty> filterlist, MyAdapter adapter) {
         this.adapter = adapter;
         this.filterlist = filterlist;
     }
 
     @Override
     protected FilterResults performFiltering(CharSequence constraint) {
-FilterResults results = new FilterResults();
-        if(constraint!=null && constraint.length()>0){
+        FilterResults results = new FilterResults();
+        if (constraint != null && constraint.length() > 0) {
             constraint = constraint.toString().toUpperCase();
             ArrayList<faculty> filteredfaculty = new ArrayList<>();
-            for(int i=0;i<filteredfaculty.size();i++){
-                if(filterlist.get(i).getName().toUpperCase().contains(constraint)){
+            for (int i = 0; i < filteredfaculty.size(); i++) {
+                if (filterlist.get(i).getName().toUpperCase().contains(constraint)) {
                     filteredfaculty.add(filterlist.get(i));
                 }
 
             }
 
-            results.count=filteredfaculty.size();
-            results.values=filteredfaculty;
+            results.count = filteredfaculty.size();
+            results.values = filteredfaculty;
 
-        }else {
+        } else {
 
-            results.count=filterlist.size();
-            results.values=filterlist;
+            results.count = filterlist.size();
+            results.values = filterlist;
         }
 
 
@@ -46,7 +47,7 @@ FilterResults results = new FilterResults();
 
     @Override
     protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
-adapter.faculties=(ArrayList<faculty>) results.values;
-   adapter.notifyDataSetChanged();
+        adapter.faculties = (ArrayList<faculty>) results.values;
+        adapter.notifyDataSetChanged();
     }
 }
